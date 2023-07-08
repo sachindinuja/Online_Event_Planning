@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+		<%
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String phone = request.getParameter("phone");
+		String subject = request.getParameter("subj");
+		String userName =request.getParameter("uname");
+		String password =request.getParameter("pass");
+		%>
+	
+	<form action="deleteCon" method="post">
+		Customer ID <input type="text" name="contid" value="<%= id %>" readonly><br>
+		Name <input type="text" name="name" value="<%= name %>"><br>
+		Email <input type="text" name="email" value="<%= email %>"><br>
+		Phone Number <input type="text" name="phone" value="<%= phone %>"><br>
+		Subject <input type="text" name="subj" value="<%= subject %>"><br>
+		User Name	<input type="text" name="uname" value="<%= userName %>"><br>
+
+		
+		<input type="submit" name="submit" value="Delete My Data">
+	</form>
+	
+</body>
+</html>
